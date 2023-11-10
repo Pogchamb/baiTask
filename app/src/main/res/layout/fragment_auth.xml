@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".features.auth.presentation.AuthFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/authLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/authButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/logotext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/main_text_color"
+        app:layout_constraintStart_toEndOf="@+id/authLogo"
+        app:layout_constraintTop_toTopOf="@id/authLogo"
+        app:layout_constraintBottom_toBottomOf="@id/authLogo"
+        android:layout_marginStart="5dp"
+        android:text="Помощник логиста"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/authHelperText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tokenInputLayout"
+        app:layout_constraintTop_toBottomOf="@id/authLogo"
+        android:padding="20dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/backBtn"
+            app:layout_constraintEnd_toStartOf="@id/firsthelperText"
+            app:layout_constraintTop_toTopOf="@id/firsthelperText"
+            app:layout_constraintBottom_toBottomOf="@id/firsthelperText"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/firsthelperText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text_color"
+            android:textSize="25sp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toEndOf="@id/backBtn"
+            android:text="Добро пожаловать в БИА.Помощник логиста"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secondHelperText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text_color"
+            android:text="Введите свой номер для авторизации"
+            app:layout_constraintTop_toBottomOf="@id/firsthelperText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="+7 (926) 650 - 00 - 00"
+        android:padding="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/main_text_color"
+        android:textColorHint="@color/hint_edit_text_color"
+        app:layout_constraintBottom_toTopOf="@+id/authButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authLogo"
+        app:layout_constraintVertical_bias="0.279"
+        android:background="@drawable/rounded_shape_white"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="phone"
+            android:background="@drawable/rounded_shape_white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/main_text_color"
+        android:textColorHint="@color/hint_edit_text_color"
+        app:layout_constraintBottom_toTopOf="@+id/authButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authLogo"
+        app:layout_constraintVertical_bias="0.279"
+        android:background="@drawable/rounded_shape_white"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_shape_white"
+            android:backgroundTint="@color/white"
+            android:maxLength="6"
+            android:hint="_ _ _ _ _ _"
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <include
+        android:id="@+id/authButton"
+        layout="@layout/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
