@@ -1,4 +1,4 @@
-package pa.chan.baitask.features.auth
+package pa.chan.baitask.features.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package pa.chan.baitask.features.auth
+package pa.chan.baitask.features.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
